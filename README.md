@@ -1,7 +1,4 @@
 # webserv
-Phase 1: Understand What You're Building (1–2 hours)
-Skim the HTTP/1.1 basics — You don't need the full RFC, just grasp the anatomy of a response:
-
 
 
 HTTP/1.1 200 OK\r\n
