@@ -16,6 +16,12 @@
 #include <string>
 #include <map>
 
+
+//represents an HTTP request
+//Request is a simple struct that holds the method, path, body, and headers of an HTTP request
+//headers are stored in a map where the key is the header name and the value is the header value
+//example: headers["Content-Type"] = "application/json";
+
 struct Request 
 {
     std::string method;   // GET, POST

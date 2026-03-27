@@ -28,8 +28,13 @@ std::string Response::build(int status, const std::string& body, const std::stri
     res << "HTTP/1.1 " << status << " " << getStatusText(status) << "\r\n";
     res << "Content-Length: " << body.size() << "\r\n";
     res << "Content-Type: " << contentType << "\r\n";
+    res << "Connection: close\r\n";
     res << "\r\n";
     res << body;
-
     return res.str();
 }
+
+// std::ostringstream is a stream used to build strings.
+// It works like std::cout with << operator,
+// but instead of printing to console, it writes to a buffer in memory
+// which is retrieved by calling [name].str().
